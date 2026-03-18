@@ -1,0 +1,79 @@
+{
+  "compilerOptions": {
+    // Target configuration for Next.js 16
+    "target": "ES2020",
+    "lib": [
+      "ES2020",
+      "dom",
+      "dom.iterable"
+    ],
+    "jsx": "react-jsx",
+    // Module configuration
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "incremental": true,
+    "allowSyntheticDefaultImports": true,
+    // Path configuration
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "@/app/*": [
+        "./app/*"
+      ],
+      "@/components/*": [
+        "./components/*"
+      ],
+      "@/lib/*": [
+        "./app/lib/*"
+      ],
+      "@/utils/*": [
+        "./app/lib/utils/*"
+      ],
+      "@/hooks/*": [
+        "./app/lib/hooks/*"
+      ],
+      "@/stores/*": [
+        "./app/lib/stores/*"
+      ],
+      "@/types/*": [
+        "./app/lib/types.ts"
+      ]
+    },
+    // React Compiler support (Next.js 16)
+    "experimentalDecorators": true,
+    "useDefineForClassFields": true,
+    // Strict type checking
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    // Plugins
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "dist",
+    "build"
+  ]
+}
