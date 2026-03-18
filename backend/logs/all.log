@@ -340,3 +340,12 @@
 2026-03-18 16:05:18:518 [32minfo[39m: [32mMongoDB connected successfully[39m
 2026-03-18 16:05:18:518 [32minfo[39m: [32mDatabase indexes created[39m
 2026-03-18 16:05:19:519 [32minfo[39m: [32mUser logged in: me@test.com[39m
+2026-03-18 16:19:42:1942 [32minfo[39m: [32mServer running on http://localhost:5000[39m
+2026-03-18 16:19:48:1948 [32minfo[39m: [32mServer running on http://localhost:5000[39m
+2026-03-18 16:19:49:1949 [32minfo[39m: [32mMongoDB connected successfully[39m
+2026-03-18 16:19:49:1949 [32minfo[39m: [32mDatabase indexes created[39m
+2026-03-18 16:19:50:1950 [32minfo[39m: [32mUser logged in: vendor@mytest.com[39m
+2026-03-18 16:20:07:207 [32minfo[39m: [32mProfile updated: 69ba417684e1ecbef499cdc8[39m
+2026-03-18 16:32:45:3245 [32minfo[39m: [32mUser logged in: vendor@mytest.com[39m
+2026-03-18 16:33:27:3327 [32minfo[39m: [32mUser logged in: me@test.com[39m
+2026-03-18 16:34:23:3423 [32minfo[39m: [32mUser logged in: admin@mytest.com[39m
