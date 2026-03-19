@@ -6,12 +6,12 @@ export interface ApiError {
   details?: Array<{ path: string; message: string }>;
 }
 
-export interface ApiResponse<T> {
+export interface ApiResponse<T = any> {
   data?: T;
   error?: ApiError;
 }
 
-async function apiCall<T>(endpoint: string, options: RequestInit = {}): Promise<ApiResponse<T>> {
+async function apiCall<T = any>(endpoint: string, options: RequestInit = {}): Promise<ApiResponse<T>> {
   try {
     const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
     const headers: HeadersInit = { ...options.headers };
