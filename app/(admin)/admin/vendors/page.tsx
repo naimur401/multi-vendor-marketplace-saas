@@ -13,7 +13,7 @@ export default function AdminVendorsPage() {
   const [vendors, setVendors] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
+  //const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
 
   const fetchVendors = async () => {
     try {
