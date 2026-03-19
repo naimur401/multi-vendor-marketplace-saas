@@ -5,6 +5,9 @@ export interface User {
   id: string;
   email: string;
   name: string;
+  firstName?: string;
+  lastName?: string;
+  phone?: string;
   role: 'customer' | 'vendor' | 'admin';
   tenantId?: string;
   avatar?: string;
