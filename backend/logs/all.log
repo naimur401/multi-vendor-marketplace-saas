@@ -372,3 +372,6 @@
 2026-03-19 18:43:17:4317 [32minfo[39m: [32mServer running on http://localhost:5000[39m
 2026-03-19 18:43:18:4318 [32minfo[39m: [32mMongoDB connected successfully[39m
 2026-03-19 18:43:18:4318 [32minfo[39m: [32mDatabase indexes created[39m
+2026-03-19 18:46:19:4619 [32minfo[39m: [32mServer running on http://localhost:5000[39m
+2026-03-19 18:46:20:4620 [32minfo[39m: [32mMongoDB connected successfully[39m
+2026-03-19 18:46:20:4620 [32minfo[39m: [32mDatabase indexes created[39m

@@ -21,10 +21,7 @@ export default function RegisterPage() {
   const router = useRouter();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -33,7 +30,7 @@ export default function RegisterPage() {
     setLoading(true);
 
     try {
-      const result = await authApi.register(formData);
+      const result = await authApi.register(formData) as any;
 
       if (result.error) {
         setError(result.error.message);
@@ -55,69 +52,34 @@ export default function RegisterPage() {
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl">Create Account</CardTitle>
-          <CardDescription>
-            Join MarketHub and start shopping or selling
-          </CardDescription>
+          <CardDescription>Join MarketHub and start shopping or selling</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             {error && (
-              <div className="p-3 bg-destructive/10 text-destructive rounded-md text-sm">
-                {error}
-              </div>
+              <div className="p-3 bg-destructive/10 text-destructive rounded-md text-sm">{error}</div>
             )}
 
             <div className="grid grid-cols-2 gap-3">
               <div>
                 <label className="text-sm font-medium mb-1 block">First Name</label>
-                <Input
-                  type="text"
-                  name="firstName"
-                  placeholder="John"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  required
-                />
+                <Input type="text" name="firstName" placeholder="John" value={formData.firstName} onChange={handleChange} required />
               </div>
               <div>
                 <label className="text-sm font-medium mb-1 block">Last Name</label>
-                <Input
-                  type="text"
-                  name="lastName"
-                  placeholder="Doe"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  required
-                />
+                <Input type="text" name="lastName" placeholder="Doe" value={formData.lastName} onChange={handleChange} required />
               </div>
             </div>
 
             <div>
               <label className="text-sm font-medium mb-1 block">Email</label>
-              <Input
-                type="email"
-                name="email"
-                placeholder="you@example.com"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
+              <Input type="email" name="email" placeholder="you@example.com" value={formData.email} onChange={handleChange} required />
             </div>
 
             <div>
               <label className="text-sm font-medium mb-1 block">Password</label>
-              <Input
-                type="password"
-                name="password"
-                placeholder="••••••••"
-                value={formData.password}
-                onChange={handleChange}
-                required
-                minLength={6}
-              />
-              <p className="text-xs text-muted-foreground mt-1">
-                At least 6 characters
-              </p>
+              <Input type="password" name="password" placeholder="••••••••" value={formData.password} onChange={handleChange} required minLength={6} />
+              <p className="text-xs text-muted-foreground mt-1">At least 6 characters</p>
             </div>
 
             <Button type="submit" className="w-full" disabled={loading}>
@@ -128,9 +90,7 @@ export default function RegisterPage() {
 
           <div className="mt-4 text-center text-sm text-muted-foreground">
             Already have an account?{' '}
-            <Link href="/login" className="text-primary hover:underline">
-              Sign in
-            </Link>
+            <Link href="/login" className="text-primary hover:underline">Sign in</Link>
           </div>
         </CardContent>
       </Card>
