@@ -14,7 +14,7 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts';
-import { Users, TrendingUp, Store, DollarSign } from 'lucide-react';
+
 
 export default function AdminDashboard() {
   const [stats, setStats] = useState<any>({
