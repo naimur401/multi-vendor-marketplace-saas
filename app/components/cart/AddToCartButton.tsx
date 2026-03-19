@@ -11,7 +11,7 @@ interface AddToCartButtonProps {
   productId: string;
   price: number;
   name: string;
-  vendorId: string;
+  tenantId: string;
   image?: string;
 }
 
@@ -19,7 +19,7 @@ export function AddToCartButton({
   productId,
   price,
   name,
-  vendorId,
+  tenantId,
   image,
 }: AddToCartButtonProps) {
   const [quantity, setQuantity] = useState(1);
@@ -38,7 +38,7 @@ export function AddToCartButton({
       quantity,
       price,
       name,
-      vendorId,
+      tenantId,
       image,
     });
   };
@@ -77,3 +77,4 @@ export function AddToCartButton({
     </div>
   );
 }
+
